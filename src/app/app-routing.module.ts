@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule)
   },
   {
+    path: 'chatroom',
+    loadChildren: () =>
+      import('./chatroom/chatroom.module').then(mod => mod.ChatroomModule)
+  },
+  {
     path: 'contacts',
     loadChildren: () =>
       import('./contacts/contacts.module').then(mod => mod.ContactsModule)
