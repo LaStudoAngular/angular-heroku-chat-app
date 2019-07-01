@@ -1,7 +1,12 @@
-<nav>
-  <ul>
-    <li><a [routerLink]="[ '/' ]" routerLinkActive="active">home</a></li>
-    <li><a [routerLink]="[ '/chatroom' ]" routerLinkActive="active">chatroom</a></li>
-    <li><a [routerLink]="[ '/contacts' ]" routerLinkActive="active">contacts</a></li>
-  </ul>
-</nav>
+<mat-toolbar color="primary">
+  <mat-toolbar-row>
+    <a class="navigation__link" [routerLink]="[ '/' ]">Angular Chat App</a>
+    <span class="spacer"></span>
+    <ul class="navigation">
+      <li class="navigation__item"><a class="navigation__link" [routerLink]="[ '/chatroom' ]"
+          routerLinkActive="navigation__link--active">chat room</a></li>
+      <li class="navigation__item"><a class="navigation__link" [routerLink]="[ '/contacts' ]"
+          routerLinkActive="navigation__link--active">contacts</a></li>
+    </ul>
+  </mat-toolbar-row>
+</mat-toolbar>

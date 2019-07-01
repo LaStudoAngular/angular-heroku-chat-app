@@ -10,6 +10,8 @@ import { AppRoutingModule } from './app-routing.module';
 import { HomeModule } from './home/home.module';
 import { ContactsModule } from './contacts/contacts.module';
 import { ChatroomModule } from './chatroom/chatroom.module';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { SharedModule } from './@shared/shared.module';
 
 @NgModule({
   declarations: [AppComponent, NavigationComponent],
@@ -18,7 +20,9 @@ import { ChatroomModule } from './chatroom/chatroom.module';
     AppRoutingModule,
     HomeModule,
     ContactsModule,
-    ChatroomModule
+    ChatroomModule,
+    BrowserAnimationsModule,
+    SharedModule
   ],
   providers: [],
   bootstrap: [AppComponent]
