@@ -1,0 +1,33 @@
+.message {
+
+  &__title {
+    display: flex !important;
+    justify-content: space-between !important;
+    margin-bottom: 6px !important;
+  }
+
+  &__control {
+    display: flex;
+    align-items: center;
+    margin-left: 30px;
+  }
+
+  //
+  &__icon {
+    cursor: pointer;
+    transition: color .2s cubic-bezier(0.075, 0.82, 0.165, 1);
+
+    &:not(:first-child) {
+      margin-left: 12px;
+    }
+
+    &--edit:hover {
+      color: forestgreen;
+    }
+
+    &--delete:hover {
+      color: firebrick;
+    }
+  }
+
+}

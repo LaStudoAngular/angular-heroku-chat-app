@@ -1,1 +1,10 @@
-<p>chat-login works!</p>
+<h2 mat-dialog-title>{{ title }}</h2>
+<mat-dialog-content [formGroup]="loginForm">
+  <mat-form-field>
+    <input matInput placeholder="Your Name" formControlName="name">
+  </mat-form-field>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button (click)="onClose()">Close</button>
+  <button mat-button (click)="onLogin()">Login</button>
+</mat-dialog-actions>

@@ -1,0 +1,19 @@
+button:not(:last-child) {
+  margin-right: 8px;
+}
+
+.chat-navigation {
+  background-color: plum;
+
+  &__user {
+    margin-left: 8px;
+  }
+
+  &__button {
+    text-transform: uppercase;
+  }
+
+  &__scroll {
+    height: 648px;
+  }
+}

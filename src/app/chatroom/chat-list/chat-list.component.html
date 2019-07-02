@@ -1,1 +1,12 @@
-<p>chat-list works!</p>
+<mat-toolbar class="chat-navigation">
+  <mat-toolbar-row>
+    <span>Chat Room</span>
+    <span class="chat-navigation__user" *ngIf="user">| {{ user.name }}</span>
+    <span class="spacer"></span>
+    <button class="chat-navigation__button" (click)="onSelect()" mat-raised-button>{{ title }}</button>
+  </mat-toolbar-row>
+</mat-toolbar>
+<mat-list>
+  <ch-chat-list-item [item]="item" *ngFor="let item of items; trackBy: trackByFn"></ch-chat-list-item>
+</mat-list>
+<ch-chat-input></ch-chat-input>

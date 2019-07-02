@@ -1,1 +1,7 @@
-<p>chat-input works!</p>
+<div class="chat__input">
+  <mat-form-field appearance="outline" [formGroup]="messageForm">
+    <mat-label>Enter chat message here</mat-label>
+    <input matInput placeholder="Your message" formControlName="message" (keyup.enter)="onSubmit()">
+    <mat-icon matSuffix>message</mat-icon>
+  </mat-form-field>
+</div>

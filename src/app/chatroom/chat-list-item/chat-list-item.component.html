@@ -1,1 +1,16 @@
-<p>chat-list-item works!</p>
+<mat-list-item class="message">
+  <img class="message__avatar" matListAvatar [src]="item.avatar" [alt]="item.author">
+  <h3 class="message__title" matLine>
+    <span>{{ item.author }}</span>
+    <span>{{ item.content.date | date:'h:mm'}}</span>
+  </h3>
+  <p class="message__body" matLine>
+    <span> -- {{ item.content.message }}</span>
+  </p>
+  <div *ngIf="user && item.id === user.id" class="message__control">
+    <mat-icon (click)="onEdit(item)" class="message__icon message__icon--edit">
+      edit</mat-icon>
+    <mat-icon (click)="onDelete(item)" class="message__icon message__icon--delete">delete</mat-icon>
+  </div>
+  <mat-divider></mat-divider>
+</mat-list-item>
