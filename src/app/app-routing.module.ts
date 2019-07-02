@@ -5,6 +5,11 @@ import { Routes, RouterModule } from '@angular/router';
 const routes: Routes = [
   {
     path: '',
+    redirectTo: '/home',
+    pathMatch: 'full'
+  },
+  {
+    path: 'home',
     loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule)
   },
   {
@@ -16,6 +21,10 @@ const routes: Routes = [
     path: 'contacts',
     loadChildren: () =>
       import('./contacts/contacts.module').then(mod => mod.ContactsModule)
+  },
+  {
+    path: '**',
+    loadChildren: () => import('./home/home.module').then(mod => mod.HomeModule)
   }
 ];
 
